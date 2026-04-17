@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Surface colors – deep dark with subtle purple tint -->
+    <color name="color_surface">#000000</color>
+    <color name="color_surface_variant">#2E2E2E</color>
+    <color name="color_surface_container_low">#1F1F1F</color>
+    <color name="color_on_surface">#FFFFFF</color>
+    <color name="color_on_surface_secondary">#B3B3B3</color>
+
+    <!-- Primary – soft purple accent -->
+    <color name="color_primary">#FFFFFF</color>
+    <color name="color_primary_container">#333333</color>
+
+    <!-- Functional colors – slightly muted for dark backgrounds -->
+    <color name="color_income">#66BB6A</color>
+    <color name="color_income_light">#1B3D1F</color>
+    <color name="color_expense">#EF5350</color>
+    <color name="color_expense_light">#3D1B1B</color>
+    <color name="color_transfer">#42A5F5</color>
+    <color name="color_transfer_light">#1B2D3D</color>
+</resources>

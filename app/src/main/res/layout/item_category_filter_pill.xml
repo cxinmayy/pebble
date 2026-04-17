@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_category_filter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    android:layout_marginEnd="10dp"
+    android:text="All"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:clickable="true"
+    android:focusable="true"
+    android:textColor="@color/color_on_surface_secondary"
+    android:background="@drawable/bg_pill_minimal" />

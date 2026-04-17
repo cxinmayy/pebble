@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base warm gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#E8B4A0"
+                android:centerColor="#C9A0D8"
+                android:endColor="#9BB8D8"
+                android:angle="135" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+
+    <!-- Overlay purple bloom center-left -->
+    <item
+        android:left="-40dp"
+        android:top="40dp"
+        android:right="80dp"
+        android:bottom="-20dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#80B388FF"
+                android:endColor="#00B388FF"
+                android:gradientRadius="160dp"
+                android:type="radial"
+                android:centerX="0.4"
+                android:centerY="0.5" />
+        </shape>
+    </item>
+
+    <!-- Overlay warm bloom bottom-left -->
+    <item
+        android:left="-20dp"
+        android:top="60dp"
+        android:right="120dp"
+        android:bottom="-40dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#60F0B87A"
+                android:endColor="#00F0B87A"
+                android:gradientRadius="120dp"
+                android:type="radial"
+                android:centerX="0.3"
+                android:centerY="0.7" />
+        </shape>
+    </item>
+
+</layer-list>

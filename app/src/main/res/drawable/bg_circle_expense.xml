@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:startColor="#E0E0E0"
+        android:endColor="#9E9E9E"
+        android:angle="270" /> <!-- Silver gradient -->
+</shape>

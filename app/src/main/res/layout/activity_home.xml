@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Bar (Fixed) -->
+        <!-- Top Bar (Fixed) -->
+        <FrameLayout
+            android:id="@+id/top_bar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_large"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingTop="56dp">
+            
+            <!-- Default State: Greeting + Month Chip + Search Icon -->
+            <LinearLayout
+                android:id="@+id/ll_top_bar_default"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_greeting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_on_surface" />
+
+                <!-- Month Filter Chip -->
+                <TextView
+                    android:id="@+id/tv_month_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_pill_minimal"
+                    android:backgroundTint="@color/color_surface_container_low"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_on_surface"
+                    android:fontFamily="@font/outfit"
+                    android:text="Apr" />
+
+                <ImageButton
+                    android:id="@+id/btn_open_search"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_search_modern"
+                    app:tint="@color/color_on_surface" />
+            </LinearLayout>
+            
+            <!-- Search State: Expanding Search Bar -->
+            <LinearLayout
+                android:id="@+id/ll_top_bar_search"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_search_bar_dark"
+                android:paddingHorizontal="20dp"
+                android:visibility="gone">
+                
+                <ImageButton
+                    android:id="@+id/btn_close_search"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_close_modern"
+                    app:tint="@color/color_on_surface"
+                    android:layout_marginEnd="8dp" />
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Search transactions..."
+                    android:textColorHint="@color/color_on_surface_secondary"
+                    android:textColor="@color/color_on_surface"
+                    android:textSize="16sp"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch" />
+                    
+                <ImageButton
+                    android:id="@+id/btn_search_filter"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_filter_modern"
+                    app:tint="@color/color_on_surface"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Entire Scrollable Content Region -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_home"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_dashboard_hero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <!-- Swipeable Wallet Balance Cards -->
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vp_wallet_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="4dp"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:overScrollMode="never" />
+
+                <!-- Dot Indicator -->
+                <LinearLayout
+                    android:id="@+id/ll_dot_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <!-- Empty wallet hint (shown when no wallets exist) -->
+                <TextView
+                    android:id="@+id/tv_no_wallets"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:text="Tap to add your first wallet"
+                    android:textColor="@color/color_on_surface_secondary"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="@dimen/padding_large"
+                    android:layout_marginBottom="@dimen/padding_medium"
+                    android:background="@drawable/bg_pill_dark"
+                    android:visibility="gone" />
+
+                <!-- Quick Actions -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/padding_large"
+                    android:paddingBottom="@dimen/padding_large">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_add_income"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:paddingHorizontal="8dp"
+                        android:text="↓ Add income"
+                        app:cornerRadius="16dp"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        app:backgroundTint="@color/color_surface_variant"
+                        android:textColor="@color/color_on_surface" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_add_expense"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:paddingHorizontal="8dp"
+                        android:text="↑ Add expense"
+                        app:cornerRadius="16dp"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        app:backgroundTint="@color/color_surface_variant"
+                        android:textColor="@color/color_on_surface" />
+                </LinearLayout>
+
+                <!-- History Header -->
+                <LinearLayout
+                    android:id="@+id/ll_history_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/padding_large"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="History"
+                        android:textSize="20sp"
+                        android:textColor="@color/color_on_surface"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        
+                        <TextView
+                            android:id="@+id/btn_filter_7d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7D"
+                            android:textColor="@color/color_surface"
+                            android:background="@drawable/bg_pill_dark"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+                            
+                        <TextView
+                            android:id="@+id/btn_filter_1m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1M"
+                            android:textColor="@color/color_on_surface_secondary"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- High-Visibility Empty State (Moved Up) -->
+                <TextView
+                    android:id="@+id/tv_empty_transactions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="300dp"
+                    android:layout_gravity="center"
+                    android:padding="32dp"
+                    android:text="No transactions this month"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/outfit"
+                    android:textColor="#FFFFFF"
+                    android:lineSpacingExtra="6dp"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <!-- Expense Graph -->
+                <FrameLayout
+                    android:id="@+id/fl_chart_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:paddingHorizontal="@dimen/padding_large">
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/chart_expense"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <!-- Separator -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_surface_variant"
+                    android:layout_marginHorizontal="@dimen/padding_large"
+                    android:layout_marginVertical="16dp" />
+
+                </LinearLayout>
+
+                <!-- Recent Transactions Header -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_on_surface"
+                    android:paddingHorizontal="@dimen/padding_large"
+                    android:paddingBottom="8dp" />
+
+                <!-- Transactions List -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_transactions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:paddingHorizontal="@dimen/padding_large"
+                        android:nestedScrollingEnabled="false" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#D9000000"
+        app:elevation="0dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

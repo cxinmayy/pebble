@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_root"
+    android:layout_width="140dp"
+    android:layout_height="220dp"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="0dp">
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#2ECCA0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_cat_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fast\nFood"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:maxWidth="100dp" />
+
+            <TextView
+                android:id="@+id/tv_spent_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="spent 0%"
+                android:textColor="#E6FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- Icon removed as per user request -->
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <!-- Vertical progress track using layout weights -->
+                <LinearLayout
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="#40FFFFFF"
+                    android:orientation="vertical">
+                    
+                    <View
+                        android:id="@+id/progress_empty_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="100" />
+                    
+                    <View
+                        android:id="@+id/progress_fill_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0"
+                        android:background="#FFFFFF" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Functional colors -->
+    <color name="color_income">#4CAF50</color>
+    <color name="color_income_light">#E8F5E9</color>
+    <color name="color_expense">#F44336</color>
+    <color name="color_expense_light">#FFEBEE</color>
+    <color name="color_transfer">#2196F3</color>
+    <color name="color_transfer_light">#E3F2FD</color>
+
+    <!-- Surface colors -->
+    <color name="color_surface">#000000</color>
+    <color name="color_surface_variant">#2E2E2E</color>
+    <color name="color_surface_container_low">#1F1F1F</color>
+    <color name="color_on_surface">#FFFFFF</color>
+    <color name="color_on_surface_secondary">#B3B3B3</color>
+
+    <color name="color_primary">#FFFFFF</color>
+    <color name="color_primary_container">#333333</color>
+
+    <!-- Chart colors palette -->
+    <color name="chart_1">#4CAF50</color>
+    <color name="chart_2">#2196F3</color>
+    <color name="chart_3">#FF9800</color>
+    <color name="chart_4">#9C27B0</color>
+    <color name="chart_5">#00BCD4</color>
+    <color name="chart_6">#F44336</color>
+    <color name="chart_7">#795548</color>
+    <color name="chart_8">#607D8B</color>
+</resources>
