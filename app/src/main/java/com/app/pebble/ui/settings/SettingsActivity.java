@@ -71,7 +71,7 @@ public class SettingsActivity extends AppCompatActivity {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Pebble Expense Tracker");
-            String shareMessage = "Hey! Let's manage our money intelligently using Pebble. Check it out:\n\nhttps://pebbleapp.example.com";
+            String shareMessage = "Hey! Let's manage our money intelligently using Pebble. Check it out:\n\nhttps://github.com/cxinmayy/pebble/releases";
             shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
             startActivity(Intent.createChooser(shareIntent, "Share Pebble via"));
         });
