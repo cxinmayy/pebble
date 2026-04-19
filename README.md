@@ -55,7 +55,8 @@ Built for speed and simplicity.
 -Quick Overview: Instantly identify high-spending areas
 -Integrated History: Category-linked transactions for better clarity
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7803be4c-04b9-4a1c-96ae-5907d0bf4156" width="260" />
+  <img width="260" alt="image" src="https://github.com/user-attachments/assets/23d3f92b-08a8-4472-b1f2-408d5d46a10b" />
+
 </p>
 
 ### 🔍 Smart Search
