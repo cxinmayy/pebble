@@ -1,3 +1,5 @@
+<head><meta name="google-site-verification" content="rdWs0OXKQTQqiiOk9bKklzuwthn47Olp6JF33GYLuCQ" /></head>
+
 <p align="center">
   <img src="https://github.com/cxinmayy/pebble/blob/main/banner2.png" alt="Pebble Banner" />
 </p>
