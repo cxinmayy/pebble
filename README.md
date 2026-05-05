@@ -17,7 +17,7 @@
 
 A fluid and interactive financial overview.
 
-- **Multi-Wallet View:** Swipeable “Deck of Cards” for accounts (Cash, Bank, Savings)
+- **Multi-Wallet View:** Swipeable "Deck of Cards" for accounts (Cash, Bank, Savings)
 - **Real-Time Balances:** Instant updates across wallets
 - **Monthly Insights:** Interactive line chart for spending trends
 - **Contextual History:** Transactions adapt dynamically to filters
@@ -51,14 +51,14 @@ Built for speed and simplicity.
 
 ### 🗂️ Category Insights
 
--Track where your money goes with a clean and visual category breakdown.
--Spending Distribution: See how much you spend per category
--Visual Cards: Color-coded category tiles with progress indicators
--Quick Overview: Instantly identify high-spending areas
--Integrated History: Category-linked transactions for better clarity
+- Track where your money goes with a clean and visual category breakdown.
+- Spending Distribution: See how much you spend per category
+- Visual Cards: Color-coded category tiles with progress indicators
+- Quick Overview: Instantly identify high-spending areas
+- Integrated History: Category-linked transactions for better clarity
+
 <p align="center">
   <img width="260" alt="image" src="https://github.com/user-attachments/assets/23d3f92b-08a8-4472-b1f2-408d5d46a10b" />
-
 </p>
 
 ### 🔍 Smart Search
@@ -67,6 +67,37 @@ Fast and intuitive data discovery.
 
 - **Inline Expansion:** Top bar transforms into search field
 - **Real-Time Results:** Instant filtering of transactions
+
+
+### 🔐 SMS Permission & Play Protect Setup *(Optional Feature)*
+
+Pebble includes an optional **Smart SMS Detection** feature that suggests transactions from banking SMS messages. Due to Google's security policies, you may need to adjust settings to use this feature.
+
+<p align="center">
+  <sub>🌿 All SMS data is processed locally. Nothing leaves your device.</sub>
+</p>
+
+#### 🛠️ One-Time Setup
+
+**Step 1: Pause Play Protect (During Installation)**
+1. Open **Google Play Store** → Tap your **Profile Icon** → **Play Protect**
+2. Tap the **⚙️ Settings gear** (top right)
+3. Toggle **"Scan apps with Play Protect"** to **OFF** temporarily
+4. Install/update Pebble
+5. *(Optional)* Re-enable Play Protect afterward
+
+**Step 2: Allow Restricted Settings (For SMS Suggestions)**
+1. Go to **Phone Settings** → **Apps** → **Pebble**
+2. Tap the **⋮ three-dot menu** (top right corner)
+3. Tap **"Allow restricted settings"** and confirm
+4. Open Pebble → **Settings** → Enable **"Get alerts from Pebble"** (If enabled disable and enable again app should ask for read SMS permission)
+
+> 💚 **Privacy Promise**  
+> Pebble processes all SMS messages **100% locally on your device**.  
+> • No banking messages are sent to any server  
+> • No personal data is collected or shared  
+> • The SMS permission is used *only* to detect transaction amounts for quick-add suggestions  
+> • You can disable this feature anytime in Settings
 
 
 ## 🎨 Design & Experience
@@ -80,7 +111,7 @@ Fast and intuitive data discovery.
 ### Micro-Interactions
 
 - **Squish Feedback:** Buttons respond with tactile scaling
-- **Cascade Animations:** Smooth “pop-in” transitions
+- **Cascade Animations:** Smooth "pop-in" transitions
 - **Tactile Deletion:** Haptic confirmation with bottom sheet
 
 ### 📳 Haptic Feedback
