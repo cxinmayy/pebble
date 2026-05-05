@@ -6,104 +6,78 @@ on:
   workflow_dispatch:
 
 jobs:
-  update_readme:
+  update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Update README
-        runpy << 'EOF'
+      - uses: actions/checkout@v4
+      
+      - name: Update releases table
+        run: |
+          python3 << 'PYEOF'
           import requests
           from datetime import datetime
           
-          r = requests.get('https://api.github.com/repos/cxinmayy/pebble/releases')
-          releases = r.json()
+          # Get releases
+          resp = requests.get('https://api.github.com/repos/cxinmayy/pebble/releases')
+          releases = resp.json()
           
-          colors = {'v2.7.1': 'FF6B6B', 'v2.7': '00D4FF', 'v2.6': '4CAF50', 'v2.5': 'FFD700', 'v2.4.2': '9C27B0', 'v2.4.1': 'FF9800', 'v2.3': '3498DB', 'v2.2.1': 'E74C3C', 'v2.2': '1ABC9C', 'v2.1': '34495E', 'v2.0': '2ECC71', 'v1.0': '27AE60'}
+          print(f"Found {len(releases)} releases")
           
-          with open('README.md', 'r') as f:
-              content = f.read()
-          
-          start = content.find('  <tr bgcolor="#F5F5F5">')
-          end = content.find('</table>', start)
-          
-          if start != -1 and end != -1:
-              rows = []
-              for rel: |
-          python3 << 'PYTHON_EOF'
-          import json
-          import subprocess
-          from datetime import datetime
-          
-          # Get releases using GitHub CLI (pre-installed)
-          result = subprocess.run(
-              ['gh', 'api', 'repos/cxinmayy/pebble/releases', '--paginate'],
-              capture_output=True,
-              text=True
-          )
-          
-          releases = json.loads(result.stdout)
-          
-          colors = {
-              'v2.7.1': 'FF6B6B', 'v2.7': '00D4FF', 'v2.6': '4CAF50', 'v2.5': 'FFD700',
-              'v2.4.2': '9C27B0', 'v2.4.1': 'FF9800', 'v2.3': '3498DB', 'v2.2.1': 'E74C3C',
-              'v2.2': '1ABC9C', 'v2.1': '34495E', 'v2.0': '2ECC71', 'v1.0': '27AE60'
-          }
-          
-          # Rea in releases:
-                  tag = rel['tag_name']
-                  color = colors.get(tag, 'CCCCCC')
-                  date = datetime.strptime(rel['published_at'], '%Y-%m-%dT%H:%M:%SZ').strftime('%B %d, %Y')
-                  feat = rel['body'].split('\n')[0][:80] if rel['body'] else 'Release'
-                  rows.append(f'  <tr bgcolor="#F5F5F5">\n    <td align="center"><img src="https://img.shields.io/badge/{tag}-{color}?style=flat" /></td>\n    <td>{feat}</td>\n    <td align="center">{date}</td>\n    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/{tag}">📖</a></td>\n  </tr>')
-              
-              before = content[:start]
-              after = content[end:]
-              new_content = before + '\n'.join(rows) + '\n' + after
-              
-              with open('README.md', 'w') as f:
-                  f.write(new_content)
-              print("✅ Updated!")
-          else:
-              print("Table not found")
-          EOF
-          python3 update.py
-
-      - name: Commit Changes
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actionsd README
+          # Read README
           with open('README.md', 'r', encoding='utf-8') as f:
               content = f.read()
           
-          # Find table boundaries
-          table_start = content.find('<table align="center" width="100%">')
-          if table_start == -1:
-              print("❌ Table not found in README")
+          print("README loaded successfully")
+          
+          # Find table markers
+          start_marker = '<table align="center" width="100%">'
+          end_marker = '</table>'
+          
+          start_idx = content.find(start_marker)
+          end_idx = content.find(end_marker, start_idx)
+          
+          if start_idx == -1 or end_idx == -1:
+              print("ERROR: Table not found in README")
               exit(1)
           
-          table_end = content.find('</table>', table_start) + len('</table>')
+          print(f"Table found at positions {start_idx} to {end_idx}")
           
-          # Keep header
-          header_end = content.find('<tr bgcolor="#F5F5F5">', table_start)
-          if header_end == -1:
-              print("❌ Header row not found")
-              exit(1)
+          # Keep table header
+          header_end = content.find('</tr>', start_idx) + len('</tr>')
+          header_end = content.find('</tr>', header_end) + len('</tr>')
           
-          header = content[table_start:header_end]
-          
-          # Generate new rows
+          # Build new rows
           rows = []
-          for release in releases:
-              tag = release['tag_name']
-              color = colors.get(tag, 'CCCCCC')
-              date_obj = datetime.strptime(release['published_at'], '%Y-%m-%dT%H:%M:%SZ')
-              date_str = date_obj.strftime('%B %d, %Y')
+          for rel in releases:
+              tag = rel['tag_name']
+              date = datetime.strptime(rel['published_at'], '%Y-%m-%dT%H:%M:%SZ').strftime('%B %d, %Y')
+              body = rel['body'].split('\n')[0][:80] if rel['body'] else 'Release'
               
-              # Get first line of body
-              body = release.get('body', 'Release')
-              if body:
-                  first_line = body.strip().split('\n')[0][:80"
+              colors = {
+                  'v2.7.1': 'FF6B6B', 'v2.7': '00D4FF', 'v2.6': '4CAF50', 'v2.5': 'FFD700',
+                  'v2.4.2': '9C27B0', 'v2.4.1': 'FF9800', 'v2.3': '3498DB', 'v2.2.1': 'E74C3C',
+                  'v2.2': '1ABC9C', 'v2.1': '34495E', 'v2.0': '2ECC71', 'v1.0': '27AE60'
+              }
+              color = colors.get(tag, 'CCCCCC')
+              
+              row = f'\n  <tr bgcolor="#F5F5F5">\n    <td align="center"><img src="https://img.shields.io/badge/{tag}-{color}?style=flat" /></td>\n    <td>{body}</td>\n    <td align="center">{date}</td>\n    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/{tag}">📖</a></td>\n  </tr>'
+              rows.append(row)
+          
+          # Reconstruct content
+          before = content[:header_end]
+          after = content[end_idx:]
+          new_content = before + ''.join(rows) + '\n' + after
+          
+          # Write back
+          with open('README.md', 'w', encoding='utf-8') as f:
+              f.write(new_content)
+          
+          print("✅ README updated successfully!")
+          PYEOF
+      
+      - name: Commit and push
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
           git add README.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Update README" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-update release table" && git push)
