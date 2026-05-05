@@ -57,12 +57,12 @@ jobs:
               # Create badge
               badge_html = f'<img src="https://img.shields.io/badge/{tag}-{color}?style=flat" />'
               
-              row = f'''  <tr bgcolor="#F5F5F5">
-    <td align="center">{badge_html}</td>
-    <td>{body}</td>
-    <td align="center">{date}</td>
-    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/{tag}">📖</a></td>
-  </tr>'''
+             row = '<tr bgcolor="#F5F5F5">' + '\n'
+row += '  <td align="center">' + badge_html + '</td>' + '\n'
+row += '  <td>' + body + '</td>' + '\n'
+row += '  <td align="center">' + date + '</td>' + '\n'
+row += '  <td align="center"><a href="...">📖</a></td>' + '\n'
+row += '</tr>'
               table_rows.append(row)
 
           # Read current README
