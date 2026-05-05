@@ -1,0 +1,101 @@
+name: Update README with Latest Releases
+
+on:
+  release:
+    types: [published, edited]
+  workflow_dispatch:
+
+jobs:
+  update_readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Generate Release Table
+        run: |
+          python3 << 'EOF'
+          import requests
+          import json
+          from datetime import datetime
+
+          # Fetch releases from GitHub API
+          response = requests.get('https://api.github.com/repos/cxinmayy/pebble/releases')
+          releases = response.json()
+
+          # Color mapping for badges
+          colors = {
+              'v2.7.1': 'FF6B6B',
+              'v2.7': '00D4FF',
+              'v2.6': '4CAF50',
+              'v2.5': 'FFD700',
+              'v2.4.2': '9C27B0',
+              'v2.4.1': 'FF9800',
+              'v2.3': '3498DB',
+              'v2.2.1': 'E74C3C',
+              'v2.2': '1ABC9C',
+              'v2.1': '34495E',
+              'v2.0': '2ECC71',
+              'v1.0': '27AE60'
+          }
+
+          # Generate table rows
+          table_rows = []
+          for release in releases:
+              tag = release['tag_name']
+              color = colors.get(tag, 'CCCCCC')
+              date = datetime.strptime(release['published_at'], '%Y-%m-%dT%H:%M:%SZ').strftime('%B %d, %Y')
+              
+              # Extract first line of body as features summary
+              body = release['body'].strip().split('\n')[0][:80]
+              
+              # Create badge
+              badge_html = f'<img src="https://img.shields.io/badge/{tag}-{color}?style=flat" />'
+              
+              row = f'''  <tr bgcolor="#F5F5F5">
+    <td align="center">{badge_html}</td>
+    <td>{body}</td>
+    <td align="center">{date}</td>
+    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/{tag}">📖</a></td>
+  </tr>'''
+              table_rows.append(row)
+
+          # Read current README
+          with open('README.md', 'r') as f:
+              content = f.read()
+
+          # Find the release table section and update it
+          start_marker = '  <tr bgcolor="#F5F5F5">'
+          end_marker = '</table>'
+          
+          if start_marker in content and end_marker in content:
+              # Get content before table
+              before_table = content[:content.find(start_marker)]
+              # Get content after table
+              after_table = content[content.rfind(end_marker):]
+              
+              # Build new table
+              new_table = '\n'.join(table_rows) + '\n' + after_table
+              
+              # Combine
+              new_content = before_table + new_table
+              
+              with open('README.md', 'w') as f:
+                  f.write(new_content)
+              print("✅ README updated successfully!")
+          else:
+              print("⚠️ Could not find table markers in README")
+          
+          EOF
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Update README with latest releases" && git push origin main)
