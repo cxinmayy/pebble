@@ -291,17 +291,13 @@ Automate transaction logging from banking SMS messages.
 
 <div align="center">
 
-### 🔥 Latest Release: v2.7.1 (May 5, 2026)
+### 🔥 Latest Release: v2.7.2 (May 06, 2026)
 
-**Complete Typography System + Animated Wallet Gradients**
+**# V2.7.2**
 
-[![View v2.7.1](https://img.shields.io/badge/View_Release-FF6B6B?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases/tag/v2.7.1)
-
-> ✨ **New:** Outfit font typography system • Animated wallet gradients (10 curated palettes) • Smart gradient persistence  
-> 🐛 **Fixed:** Critical category screen crash
+[![View v2.7.2](https://img.shields.io/badge/View_Release-FF6B6B?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases/tag/v2.7.2)
 
 ---
-
 ### All Releases
 
 </div>
@@ -394,7 +390,7 @@ Automate transaction logging from banking SMS messages.
     <td align="center">April 17, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v1.0">📖</a></td>
   </tr>
-</table>
+
 
 ---
 
