@@ -35,7 +35,7 @@
 
 <div align="center">
 
-### ⚡ Fast &nbsp;•&nbsp; 🎨 Beautiful &nbsp;•&nbsp; 🔒 Private &nbsp;•&nbsp; 📱 Offline-First
+### ⚡ Fast &nbsp;•&nbsp; 🎨 Beautiful &nbsp;•&nbsp; 🔒 Private &nbsp;•&nbsp; 📱 Tactile
 
 </div>
 
