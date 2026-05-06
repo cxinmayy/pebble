@@ -22,9 +22,27 @@ latest = releases[0]
 latest_tag = latest.get('tag_name', 'unknown')
 latest_date = datetime.strptime(latest['published_at'], '%Y-%m-%dT%H:%M:%SZ').strftime('%B %d, %Y')
 
-# Strip leading markdown heading symbols (e.g. "# V2.7.2" → "V2.7.2")
-raw_latest_body = (latest.get('body') or '').strip().split('\n')[0][:200]
-latest_body = re.sub(r'^#+\s*', '', raw_latest_body).strip() or 'Latest release'
+
+def extract_summary(body: str, max_chars: int = 200) -> str:
+    """
+    Skip lines that are just a version heading (e.g. '# V2.7.2') and return
+    the first meaningful line of content. Falls back to the tag name if empty.
+    """
+    if not body:
+        return ''
+    for line in body.strip().splitlines():
+        clean = re.sub(r'^#+\s*', '', line).strip()   # strip markdown headings
+        clean = re.sub(r'^\*+|\*+$', '', clean).strip()  # strip surrounding bold markers
+        # Skip lines that are empty or look like a bare version title (e.g. "V2.7.2")
+        if not clean or re.fullmatch(r'[Vv]?\d[\d.]*', clean):
+            continue
+        return clean[:max_chars]
+    return ''
+
+
+latest_summary = extract_summary(latest.get('body') or '')
+# Used in the "Latest Release" banner — show the tag name if no real summary
+latest_body = latest_summary or f'Release {latest_tag}'
 
 print(f"✅ Latest release: {latest_tag} on {latest_date}")
 
@@ -32,6 +50,16 @@ print("📖 Reading README...")
 with open('README.md', 'r', encoding='utf-8') as f:
     content = f.read()
 print("✅ README loaded")
+
+# ================= FIX 1: Update version badge in header =================
+# Matches:  ![Version](https://img.shields.io/badge/Version-X.Y.Z-COLOR?style=...)
+version_badge_pattern = r'(!\[Version\]\(https://img\.shields\.io/badge/Version-)[\d.]+(-[^)]+\))'
+new_version_badge = rf'\g<1>{latest_tag[1:] if latest_tag.startswith("v") else latest_tag}\2'
+content, n = re.subn(version_badge_pattern, new_version_badge, content)
+if n:
+    print(f"✅ Updated version badge to {latest_tag}")
+else:
+    print("⚠️ Version badge not found in README — skipping badge update")
 
 # ================= Update Latest Release block =================
 new_latest_block = (
@@ -46,22 +74,20 @@ m = re.search(pattern, content, flags=re.IGNORECASE)
 if m:
     print("ℹ️ Found existing Latest Release block; replacing it.")
     content = re.sub(pattern, new_latest_block, content, count=1, flags=re.IGNORECASE)
-    print("✅ Replaced Latest Release block using flexible regex")
+    print("✅ Replaced Latest Release block")
 else:
     insert_marker = "### All Releases"
     if insert_marker in content:
         idx = content.find(insert_marker)
         content = content[:idx] + new_latest_block + content[idx:]
-        print("⚠️ 'Latest Release' marker not found — inserted new block before 'All Releases'")
+        print("⚠️ Inserted new Latest Release block before 'All Releases'")
     else:
         first_h2 = content.find("\n## ")
         if first_h2 != -1:
-            insert_at = first_h2 + 1
-            content = content[:insert_at] + new_latest_block + content[insert_at:]
-            print("⚠️ Marker missing — inserted new block near top")
+            content = content[:first_h2 + 1] + new_latest_block + content[first_h2 + 1:]
         else:
             content = new_latest_block + content
-            print("⚠️ Marker missing — prepended Latest Release block to the top")
+        print("⚠️ Inserted Latest Release block near top")
 
 # ================= Update version table =================
 start_marker = '<table align="center" width="100%">'
@@ -69,7 +95,7 @@ end_marker = '</table>'
 
 start_idx = content.find(start_marker)
 if start_idx == -1:
-    print("❌ ERROR: Opening <table> tag not found; aborting table update.")
+    print("❌ ERROR: Opening <table> tag not found; aborting.")
     with open('README.md', 'w', encoding='utf-8') as f:
         f.write(content)
     raise SystemExit(1)
@@ -77,11 +103,11 @@ if start_idx == -1:
 end_idx = content.find(end_marker, start_idx)
 
 if end_idx == -1:
-    # RECOVERY: </table> was eaten by the previous bug — patch it back in after the last </tr>
-    print("⚠️ WARNING: </table> missing (previous bug) — recovering...")
+    # RECOVERY: </table> was eaten by a previous bug — patch it in after the last </tr>
+    print("⚠️ WARNING: </table> missing — recovering...")
     last_tr_end = content.rfind('</tr>', start_idx)
     if last_tr_end == -1:
-        print("❌ ERROR: Could not find any </tr> tags; aborting.")
+        print("❌ ERROR: No </tr> tags found; aborting.")
         with open('README.md', 'w', encoding='utf-8') as f:
             f.write(content)
         raise SystemExit(1)
@@ -103,7 +129,7 @@ while tr_count < 2:
 
 print("✅ Table found, building rows...")
 
-# Known colors; new/unknown tags cycle through palette automatically
+# Known colors; new/unknown tags cycle through palette
 colors = {
     'v2.7.1': 'FF6B6B', 'v2.7': '00D4FF', 'v2.6': '4CAF50', 'v2.5': 'FFD700',
     'v2.4.2': '9C27B0', 'v2.4.1': 'FF9800', 'v2.3': '3498DB', 'v2.2.1': 'E74C3C',
@@ -124,9 +150,8 @@ for i, rel in enumerate(releases):
     except Exception:
         date_str = pub or ''
 
-    # Strip markdown heading symbols from body text
-    raw_body = (rel.get('body') or '').split('\n')[0][:200]
-    body_text = re.sub(r'^#+\s*', '', raw_body).strip() or 'Release'
+    # FIX 2: Skip the version-title first line; grab actual feature content
+    body_text = extract_summary(rel.get('body') or '') or f'Release {tag}'
 
     row = (
         f'\n  <tr bgcolor="#F5F5F5">\n'
@@ -140,7 +165,7 @@ for i, rel in enumerate(releases):
 
 print(f"✅ Built {len(rows)} rows")
 
-# Always explicitly write </table> so it is never dropped
+# Always explicitly write </table> so it is never dropped again
 new_content = (
     content[:header_end]
     + ''.join(rows)
