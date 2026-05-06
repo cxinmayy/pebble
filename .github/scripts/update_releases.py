@@ -6,12 +6,42 @@ resp = requests.get('https://api.github.com/repos/cxinmayy/pebble/releases')
 releases = resp.json()
 print(f"✅ Found {len(releases)} releases")
 
+if not releases:
+    print("❌ No releases found!")
+    exit(1)
+
+# Get latest release
+latest = releases[0]
+latest_tag = latest['tag_name']
+latest_date = datetime.strptime(latest['published_at'], '%Y-%m-%dT%H:%M:%SZ').strftime('%B %d, %Y')
+latest_body = latest['body'].split('\n')[0][:80] if latest['body'] else 'Latest Release'
+
+print(f"✅ Latest release: {latest_tag} on {latest_date}")
+
 print("📖 Reading README...")
 with open('README.md', 'r', encoding='utf-8') as f:
     content = f.read()
 print("✅ README loaded")
 
-# Find table
+# ============== UPDATE LATEST RELEASE SECTION ==============
+old_latest = f"### 🔥 Latest Release: {latest_tag} ({latest_date})"
+new_latest_section = f"""### 🔥 Latest Release: {latest_tag} ({latest_date})
+
+**{latest_body}**
+
+[![View {latest_tag}](https://img.shields.io/badge/View_Release-FF6B6B?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases/tag/{latest_tag})"""
+
+# Find and replace latest release marker
+latest_marker_start = content.find("### 🔥 Latest Release:")
+if latest_marker_start != -1:
+    latest_marker_end = content.find("---", latest_marker_start) - 1
+    old_section = content[latest_marker_start:latest_marker_end].strip()
+    content = content.replace(old_section, new_latest_section.strip())
+    print("✅ Updated Latest Release section")
+else:
+    print("⚠️ Latest Release section not found")
+
+# ============== UPDATE VERSION TABLE ==============
 start_marker = '<table align="center" width="100%">'
 end_marker = '</table>'
 start_idx = content.find(start_marker)
@@ -54,7 +84,7 @@ for rel in releases:
 
 print(f"✅ Built {len(rows)} rows")
 
-# Write
+# Write table
 before = content[:header_end]
 after = content[end_idx:]
 new_content = before + ''.join(rows) + '\n' + after
