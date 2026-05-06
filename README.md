@@ -4,257 +4,209 @@
   <img src="https://github.com/cxinmayy/pebble/blob/main/banner2.png" alt="Pebble Banner" width="100%" />
 </div>
 
+<br>
+
 <div align="center">
 
-# Pebble
+<h1>🪨 Pebble</h1>
+<h3><em>Your finances, finally under control.</em></h3>
 
-</div>
-<div align="center">
+<br>
 
-## Premium Personal Finance App
-
-**Fast • Tactile • Elegant**
-
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Version](https://img.shields.io/badge/Version-2.7.2-FF6B6B?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-2.7.2-FF6B6B?style=for-the-badge&logo=github&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-4CAF50?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Android_8.0+-blue?style=for-the-badge&logo=android&logoColor=white)
+
+<br>
+
+[![Download APK](https://img.shields.io/badge/⬇%EF%B8%8F_Download_Latest_APK-FF6B6B?style=for-the-badge&logoColor=white)](https://github.com/cxinmayy/pebble/releases/latest)
+&nbsp;
+[![Release History](https://img.shields.io/badge/📋_Release_History-00D4FF?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases)
+&nbsp;
+[![Buy Me Coffee](https://img.shields.io/badge/☕_Support_Dev-FFD700?style=for-the-badge&logoColor=black)](https://buymeachai.ezee.li/cxinmayy)
+
+<br>
+
+</div>
 
 ---
 
-### 🚀 Quick Links
+<div align="center">
 
-[![📥 Download APK](https://img.shields.io/badge/📥_Download_Latest-FF6B6B?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases/latest)
-[![📖 View Releases](https://img.shields.io/badge/📖_Release_History-00D4FF?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases)
-[![☕ Support Development](https://img.shields.io/badge/☕_Buy_Me_Coffee-FFD700?style=for-the-badge)](https://buymeachai.ezee.li/cxinmayy)
+### ⚡ Fast &nbsp;•&nbsp; 🎨 Beautiful &nbsp;•&nbsp; 🔒 Private &nbsp;•&nbsp; 📱 Offline-First
 
 </div>
 
 ---
 
-## ⚠️ IMPORTANT: Installation Setup Required
+## 📖 Table of Contents
 
-> **🔴 READ THIS FIRST** - Without completing these steps, you **CANNOT install Pebble**. Google Play Protect will block the installation due to SMS permissions.
-
-### 📋 Pre-Installation Checklist
-
-This is a **ONE-TIME setup** that takes 2 minutes and must be done BEFORE installing Pebble.
-
----
-
-### ✅ Step 1: Disable Play Protect (Temporarily)
-
-Follow these exact steps to pause Play Protect during installation:
-
-1. Open the **Google Play Store** app on your Android device
-2. Tap your **Profile Icon** (top right corner)
-3. Tap **Play Protect**
-4. Tap the **⚙️ Settings gear icon** (top right)
-5. Toggle **"Scan apps with Play Protect"** to **OFF** *(turn it OFF)*
-6. Now proceed to install Pebble from the [Releases Page](https://github.com/cxinmayy/pebble/releases/latest)
-7. *(Optional)* After installation completes, you can re-enable Play Protect
-
-<div align="center">
-
-**Visual Guide:**
-```
-Play Store → Profile Icon → Play Protect → Settings ⚙️ → Turn OFF
-```
-
-</div>
-
-> ⏱️ **Why?** Google Play Protect flags apps with SMS permissions as potentially risky. This is a standard security measure. Pebble only reads SMS to suggest transactions—nothing more.
+- [🚀 Installation](#-installation)
+- [✨ Features](#-features)
+- [🎨 Design](#-design-philosophy)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📈 Release History](#-release-history)
+- [🤝 Contributing](#-contributing)
 
 ---
 
-### ✅ Step 2: Allow Restricted Settings (Optional - For SMS Alerts)
+## 🚀 Installation
 
-If you want to use the **Smart SMS Detection** feature to auto-detect banking transactions, follow these steps:
+> [!IMPORTANT]
+> **Complete these steps BEFORE installing.** Google Play Protect blocks sideloaded apps with SMS permissions by default.
 
-1. Go to your phone **Settings**
-2. Navigate to **Apps** or **Application Manager**
-3. Find and tap **Pebble**
-4. Tap the **⋮ three-dot menu** (top right corner)
-5. Tap **"Allow restricted settings"** and confirm
-6. Open Pebble
-7. Go to **Settings** → **Enable "Get alerts from Pebble"**
-8. If already enabled, toggle it **OFF** then **ON** again (app will ask for SMS permission)
+<br>
 
-<div align="center">
+<table align="center" width="90%">
+  <tr>
+    <td width="50%" valign="top">
 
-**Visual Guide:**
+### Step 1 — Disable Play Protect
+
+1. Open **Google Play Store**
+2. Tap your **Profile Icon** → **Play Protect**
+3. Tap ⚙️ **Settings** (top right)
+4. Toggle **"Scan apps with Play Protect" → OFF**
+5. Install Pebble from the [Releases Page](https://github.com/cxinmayy/pebble/releases/latest)
+6. *(Optional)* Re-enable Play Protect after install
+
 ```
-Phone Settings → Apps → Pebble → ⋮ Menu → Allow restricted settings
+Play Store → Profile → Play Protect → ⚙️ → OFF
 ```
 
-</div>
+  </td>
+    <td width="50%" valign="top">
 
-> 💡 **Optional Feature** - You can skip this step if you don't want SMS suggestions. Pebble works perfectly without it.
+### Step 2 — Allow SMS *(Optional)*
+
+*Only needed for Smart SMS Detection.*
+
+1. Go to phone **Settings → Apps → Pebble**
+2. Tap **⋮** → **Allow restricted settings**
+3. Open Pebble → **Settings**
+4. Enable **"Get alerts from Pebble"**
+5. Toggle OFF then ON to trigger permission
+
+```
+Settings → Apps → Pebble → ⋮ → Allow restricted
+```
+
+  </td>
+  </tr>
+</table>
+
+<br>
+
+> [!NOTE]
+> **Why Play Protect?** Pebble reads SMS only to suggest transaction amounts — all processing happens 100% locally on your device. Nothing is ever sent to a server.
 
 ---
 
-### 💚 Privacy & Security Promise
-
-> **Your data is YOURS. Period.**
->
-> - ✅ All SMS data is processed **100% locally on your device**
-> - ✅ No banking messages are sent to any server
-> - ✅ No personal data is collected or shared
-> - ✅ The SMS permission is used *only* to detect transaction amounts for quick-add suggestions
-> - ✅ You can disable this feature anytime in Settings
-> - ✅ Pebble works perfectly fine WITHOUT SMS features enabled
-
----
-
----
-
-## ✨ What Makes Pebble Special
-
-Pebble replaces traditional spreadsheet-style tracking with a **fluid, physical interface** that feels responsive and alive. Every interaction is intentional, every animation purposeful.
-
-> 💡 *"Great finance apps are invisible. The best just work—reliably, beautifully, and at lightning speed."*
-
----
-
-## 🎯 Core Features
-
-### 🏦 Dynamic Dashboard
-A fluid and interactive financial overview.
-- **Multi-Wallet View:** Swipeable "Deck of Cards" for accounts (Cash, Bank, Savings)
-- **Real-Time Balances:** Instant updates across wallets with animated gradients
-- **Monthly Insights:** Interactive line chart for spending trends
-- **Contextual History:** Transactions adapt dynamically to filters
+## 🔒 Privacy Promise
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/f9d0d687-678c-4e4e-ad84-8ed5df38b0ee" width="260" />
-  <img src="https://github.com/user-attachments/assets/6a9440eb-7da6-4fb0-b7df-1c3e1dcfd807" width="260" />
+
+| What Pebble Does | What Pebble NEVER Does |
+|:---|:---|
+| ✅ Processes SMS **locally on your device** | ❌ Send your data to any server |
+| ✅ Stores everything in **local Room DB** | ❌ Collect analytics or tracking |
+| ✅ Backs up to **your own Google Drive** | ❌ Share data with third parties |
+| ✅ Works **100% offline** | ❌ Require an account or login |
+
 </div>
 
 ---
 
-### 📅 Advanced Month Filtering
-Full control over your financial timeline.
-- **Grid-Based Month Picker:** Clean and premium selection UI
-- **Instant Updates:** Charts and history react in real time
-- **Smart Reset:** Defaults to current month on app restart
+## ✨ Features
 
----
+<br>
 
-### 💸 Rapid Transaction Entry
-Built for speed and simplicity.
-- **Custom Numpad:** Fast, precise amount entry
-- **Account Switching:** Toggle accounts without leaving screen
-- **Visual Categories:** Icons with clear, high-contrast labels
+<table align="center" width="100%">
+  <tr>
+    <td align="center" colspan="3" bgcolor="#1a1a2e" style="padding:14px; color:white; font-size:16px;">
+      <strong>🎯 CORE CAPABILITIES</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%" valign="top" style="padding:12px;">
+      <h3>🏦 Dashboard</h3>
+      Swipeable wallet cards, real-time balances, monthly trend chart, and adaptive transaction history — all on one screen.
+    </td>
+    <td align="center" width="33%" valign="top" style="padding:12px;">
+      <h3>💸 Quick Entry</h3>
+      Custom numpad for instant transaction logging. Switch wallets and categories without leaving the screen.
+    </td>
+    <td align="center" width="33%" valign="top" style="padding:12px;">
+      <h3>📊 Reports & PDF</h3>
+      Full-page analytics dashboard. Filter by date, wallet, category, amount, or keyword. Export professional PDFs in one tap.
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" style="padding:12px;">
+      <h3>💰 Budgets</h3>
+      Set monthly limits per category. Get alerts at 80% and 100%. Visual progress tracking so you never overspend.
+    </td>
+    <td align="center" valign="top" style="padding:12px;">
+      <h3>📅 Scheduled Payments</h3>
+      Plan future income and expenses. Recurring payment support for subscriptions and bills. Multi-currency ready.
+    </td>
+    <td align="center" valign="top" style="padding:12px;">
+      <h3>🔐 Loan Tracker</h3>
+      Track what you owe and what you're owed. Add repayments, view schedules, and see full loan history.
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" style="padding:12px;">
+      <h3>☁️ Cloud Backup</h3>
+      One-tap Google Drive backup. 24-hour auto-sync. Restore anytime, anywhere. Data stored in hidden AppData.
+    </td>
+    <td align="center" valign="top" style="padding:12px;">
+      <h3>📱 Widgets</h3>
+      Balance overview, quick income/expense entry, and compact transaction widget — right on your home screen.
+    </td>
+    <td align="center" valign="top" style="padding:12px;">
+      <h3>💬 Smart SMS</h3>
+      Auto-detects banking SMS and pre-fills transaction amounts. Fully local. Disable anytime in Settings.
+    </td>
+  </tr>
+</table>
+
+<br>
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/3f6fd07b-0603-453a-9e07-8288002f6edd" width="260" />
+  <img src="https://github.com/user-attachments/assets/f9d0d687-678c-4e4e-ad84-8ed5df38b0ee" width="220" />
+  &nbsp;&nbsp;
+  <img src="https://github.com/user-attachments/assets/6a9440eb-7da6-4fb0-b7df-1c3e1dcfd807" width="220" />
+  &nbsp;&nbsp;
+  <img src="https://github.com/user-attachments/assets/3f6fd07b-0603-453a-9e07-8288002f6edd" width="220" />
 </div>
 
----
-
-### 🗂️ Category Insights
-Track where your money goes with crystal-clear visuals.
-- **Spending Distribution:** See how much you spend per category
-- **Visual Cards:** Color-coded category tiles with progress indicators
-- **Quick Overview:** Instantly identify high-spending areas
-- **Integrated History:** Category-linked transactions for better clarity
+<br>
 
 <div align="center">
-  <img width="260" alt="Categories" src="https://github.com/user-attachments/assets/23d3f92b-08a8-4472-b1f2-408d5d46a10b" />
+  <img width="220" src="https://github.com/user-attachments/assets/23d3f92b-08a8-4472-b1f2-408d5d46a10b" />
+  &nbsp;&nbsp;
+  <img src="https://github.com/user-attachments/assets/ede4c799-ad4c-4d38-8182-f0973cdbd7a8" width="220" />
 </div>
-
----
-
-### 🔍 Smart Search
-Fast and intuitive data discovery.
-- **Inline Expansion:** Top bar transforms into search field
-- **Real-Time Results:** Instant filtering of transactions
-
----
-
-### 📊 Reports & Analytics
-Professional financial insights at your fingertips.
-- **Interactive Reports Dashboard:** Full-page financial overview
-- **Advanced Filtering:** Filter by date, wallet, category, amount, keywords
-- **PDF Export:** Generate professional PDF summaries with a single tap
-- **Real-Time Updates:** Instant transaction list updates
-
----
-
-### 💰 Budget Management
-Stay in control of your spending.
-- **Category-Specific Monthly Budgets:** Set individual limits per category
-- **Proactive Budget Alerts:** Warning at 80%, Limit Exceeded at 100%
-- **Smart Notifications:** No duplicate alerts, only track expenses
-- **Visual Progress Tracking:** See your progress toward monthly goals
-
----
-
-### 📅 Scheduled Payments
-Shift from reactive to proactive financial planning.
-- **Planned Income & Expenses:** Schedule future transactions
-- **Recurring Payment Support:** Automate subscriptions and regular bills
-- **Optional Notifications:** Get alerts when payments are logged
-- **Multi-Currency Support:** Track payments across different currencies
-
----
-
-### 🔐 Loan Management
-Track borrowed and lent money effortlessly.
-- **Outstanding Balance Tracking:** See what you owe or are owed
-- **Repayment Schedules:** Monitor payment progress
-- **Payment Records:** Add and track individual loan payments
-- **Integrated History:** Full transaction history per loan
-
----
-
-### ☁️ Cloud Backup & Restore
-Bulletproof data safety with one-tap peace of mind.
-- **Google Drive Integration:** Secure backup of database, settings, and receipts
-- **24-Hour Auto Sync:** Intelligent daily syncing that respects battery life
-- **One-Tap Restore:** Recover your data anytime, anywhere
-- **Invisible AppData:** Your backup data is hidden in Google Drive
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/ede4c799-ad4c-4d38-8182-f0973cdbd7a8" width="300" />
-</div>
-
----
-
-### 📱 Home Screen Widgets
-Quick financial access without opening the app.
-- **Balance Overview Widget:** Total balance + recent trend graph
-- **Quick Income & Expense Widget:** One-tap transaction buttons
-- **Compact Transaction Widget:** Minimal indicator-based overview
-
----
-
-### 💬 Smart SMS Detection
-Automate transaction logging from banking SMS messages.
-- **Local Processing:** All SMS parsing happens on your device
-- **Quick-Add Suggestions:** Pre-filled transaction amounts
-- **Complete Privacy:** Nothing leaves your phone
-- **Optional Feature:** Disable anytime in Settings
 
 ---
 
 ## 🎨 Design Philosophy
 
-### Visual Excellence
-- **Typography:** Outfit font for modern readability
-- **Dark Theme:** Charcoal and obsidian palette with high contrast
-- **Glassmorphism:** Subtle depth with translucent surfaces
-- **Animated Gradients:** Fluid, personalized wallet card backgrounds
+<div align="center">
 
-### Micro-Interactions
-- **Squish Feedback:** Buttons respond with tactile scaling
-- **Cascade Animations:** Smooth "pop-in" transitions
-- **Tactile Deletion:** Haptic confirmation with bottom sheet
-- **Rubber Band Pull:** Stretch animation for responsive feel
+| Principle | Details |
+|:---:|:---|
+| 🖋️ **Typography** | Outfit font — consistent, modern, readable across all screens |
+| 🌑 **Dark Theme** | Charcoal & obsidian palette with high contrast ratios |
+| 🪟 **Glassmorphism** | Subtle translucent surfaces for depth without clutter |
+| 🌈 **Liquid Gradients** | Animated mesh gradients on wallet cards — vivid & personalized |
+| 🫧 **Micro-interactions** | Squish buttons, cascade pop-ins, rubber-band pulls, haptic ticks |
+| 📳 **Haptics** | Distinct vibration patterns for navigation, success, and errors |
 
-### 📳 Haptic Feedback
-- Soft navigation ticks  
-- Distinct success and error vibrations  
+</div>
 
 ---
 
@@ -262,28 +214,18 @@ Automate transaction logging from banking SMS messages.
 
 <div align="center">
 
-| Category | Technologies |
-|----------|--------------|
-| **Language** | Java / Kotlin |
-| **UI Framework** | Android XML (Material Design) |
-| **Architecture** | ViewModel, LiveData, MVVM |
-| **Database** | Room (offline-first) |
-| **Charting** | MPAndroidChart |
+| Layer | Technology |
+|:---:|:---|
+| **Language** | Java + Kotlin |
+| **UI** | Android XML · Material Design 3 |
+| **Architecture** | MVVM · ViewModel · LiveData |
+| **Database** | Room *(offline-first)* |
+| **Charts** | MPAndroidChart |
 | **Cloud** | Google Drive API |
-| **Notifications** | Android WorkManager |
-| **Background Tasks** | Android Background Services |
+| **Background** | WorkManager · Background Services |
+| **Performance** | 60 FPS · lazy loading · efficient diff callbacks |
 
 </div>
-
----
-
-## 🚀 Performance
-
-- ⚡ Smooth 60FPS interactions
-- 🎯 Optimized chart rendering
-- 🔄 Efficient list updates with reactive UI
-- 💨 Minimal battery impact
-- 📊 Intelligent background sync
 
 ---
 
@@ -293,152 +235,163 @@ Automate transaction logging from banking SMS messages.
 
 ### 🔥 Latest Release: v2.7.2 (May 06, 2026)
 
-**This update unveils a completely reimagined visual engine: the new **Liquid Mesh Gradient System**, **Thematic Chart Sync**, and a premium in-app update experience. Wallet cards now flow with vivid, l**
+**This update unveils a completely reimagined visual engine: the new Liquid Mesh Gradient System, Thematic Chart Sync, and a premium in-app update experience.**
 
-[![View v2.7.2](https://img.shields.io/badge/View_Release-FF6B6B?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases/tag/v2.7.2)
+[![Download v2.7.2](https://img.shields.io/badge/⬇%EF%B8%8F_Download_v2.7.2-FF6B6B?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases/tag/v2.7.2)
+&nbsp;
+[![All Releases](https://img.shields.io/badge/📋_All_Releases-555555?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases)
 
 ---
+
 ### All Releases
 
 </div>
 
 <table align="center" width="100%">
   <tr>
-    <td colspan="4" align="center" bgcolor="#FF6B6B" style="padding: 10px; color: white; font-weight: bold;">VERSION TIMELINE</td>
+    <td colspan="4" align="center" bgcolor="#FF6B6B" style="padding: 12px; color: white; font-weight: bold; letter-spacing: 1px;">
+      📦 VERSION TIMELINE
+    </td>
   </tr>
-  <tr>
-    <td align="center" width="25%"><strong>Version</strong></td>
-    <td align="center" width="45%"><strong>Key Features</strong></td>
-    <td align="center" width="20%"><strong>Release Date</strong></td>
+  <tr bgcolor="#2d2d2d">
+    <td align="center" width="20%"><strong>Version</strong></td>
+    <td align="center" width="50%"><strong>What's New</strong></td>
+    <td align="center" width="20%"><strong>Released</strong></td>
     <td align="center" width="10%"><strong>Link</strong></td>
   </tr>
   <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.7.2-FF6B6B?style=flat" /></td>
-    <td>This update unveils a completely reimagined visual engine: the new **Liquid Mesh Gradient System**, **Thematic Chart Sync**, and a premium in-app update experience. Wallet cards now flow with vivid, l</td>
-    <td align="center">May 06, 2026</td>
+    <td align="center"><img src="https://img.shields.io/badge/v2.7.2-FF6B6B?style=flat-square" /><br><sub>🆕 Latest</sub></td>
+    <td>This update unveils a completely reimagined visual engine: the new Liquid Mesh Gradient System, Thematic Chart Sync, and a premium in-app update experience. Wallet cards now flow with vivid, l</td>
+    <td align="center"><sub>May 06, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7.2">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.7.1-FF6B6B?style=flat" /></td>
-    <td>This update delivers a polished visual foundation with a complete typography system and fluid, animated wallet gradients. Enjoy consistent, premium typography across every screen and personalized, liv</td>
-    <td align="center">May 05, 2026</td>
+    <td align="center"><img src="https://img.shields.io/badge/v2.7.1-FF6B6B?style=flat-square" /></td>
+    <td>This update delivers a polished visual foundation with a complete typography system and fluid, animated wallet gradients.</td>
+    <td align="center"><sub>May 05, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7.1">📖</a></td>
   </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.7-00D4FF?style=flat" /></td>
-    <td>This update introduces intelligent SMS transaction detection, seamless Google Drive cloud backups, and a completely redesigned Settings dashboard. Automate your financial tracking, secure your data wi</td>
-    <td align="center">May 03, 2026</td>
+  <tr bgcolor="#FAFAFA">
+    <td align="center"><img src="https://img.shields.io/badge/v2.7-00D4FF?style=flat-square" /></td>
+    <td>Intelligent SMS transaction detection, seamless Google Drive cloud backups, and a completely redesigned Settings dashboard.</td>
+    <td align="center"><sub>May 03, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.6-4CAF50?style=flat" /></td>
-    <td>This update introduces a powerful Reports module, proactive Budget Alerts, and smarter transaction entry tools. Filter data in real-time, export professional PDF summaries, stay ahead of monthly spend</td>
-    <td align="center">April 25, 2026</td>
+    <td align="center"><img src="https://img.shields.io/badge/v2.6-4CAF50?style=flat-square" /></td>
+    <td>Powerful Reports module, proactive Budget Alerts, and smarter transaction entry tools with real-time filtering and PDF export.</td>
+    <td align="center"><sub>Apr 25, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.6">📖</a></td>
   </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.5-FFD700?style=flat" /></td>
-    <td>> This update introduces a dedicated "Check for Updates" button in the app settings, directly linked to GitHub. Stay in control of your app version with a streamlined, transparent way to verify and ac</td>
-    <td align="center">April 22, 2026</td>
+  <tr bgcolor="#FAFAFA">
+    <td align="center"><img src="https://img.shields.io/badge/v2.5-FFD700?style=flat-square" /></td>
+    <td>Dedicated "Check for Updates" button in settings, directly linked to GitHub releases for transparent version control.</td>
+    <td align="center"><sub>Apr 22, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.5">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.4.2-9C27B0?style=flat" /></td>
-    <td>This update introduces comprehensive multi-currency support and resolves critical stability issues with recurring payments, delivering a more versatile and crash-free financial tracking experience.</td>
-    <td align="center">April 22, 2026</td>
+    <td align="center"><img src="https://img.shields.io/badge/v2.4.2-9C27B0?style=flat-square" /></td>
+    <td>Comprehensive multi-currency support and critical stability fixes for recurring payments.</td>
+    <td align="center"><sub>Apr 22, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.4.2">📖</a></td>
   </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.4.1-FF9800?style=flat" /></td>
-    <td>This update introduces customizable icon support for categories and wallets, resolves key search and loan tracking issues, and refines the editing workflow for a more reliable and personalized financi</td>
-    <td align="center">April 21, 2026</td>
+  <tr bgcolor="#FAFAFA">
+    <td align="center"><img src="https://img.shields.io/badge/v2.4.1-FF9800?style=flat-square" /></td>
+    <td>Customizable icons for categories and wallets, search and loan tracking fixes, refined editing workflow.</td>
+    <td align="center"><sub>Apr 21, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.4.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.3-3498DB?style=flat" /></td>
-    <td>This update introduces powerful budget management tools, streamlined category editing, and refines the balance overview layout for a smoother financial tracking experience.</td>
-    <td align="center">April 21, 2026</td>
+    <td align="center"><img src="https://img.shields.io/badge/v2.3-3498DB?style=flat-square" /></td>
+    <td>Budget management tools, streamlined category editing, and a refined balance overview layout.</td>
+    <td align="center"><sub>Apr 21, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.3">📖</a></td>
   </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.2.1-E74C3C?style=flat" /></td>
-    <td>This update fixes an issue in graph rendering logic to ensure accurate financial trend representation across weekly and monthly views.</td>
-    <td align="center">April 20, 2026</td>
+  <tr bgcolor="#FAFAFA">
+    <td align="center"><img src="https://img.shields.io/badge/v2.2.1-E74C3C?style=flat-square" /></td>
+    <td>Fixed graph rendering logic for accurate financial trend representation across weekly and monthly views.</td>
+    <td align="center"><sub>Apr 20, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.2.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.2-1ABC9C?style=flat" /></td>
-    <td>Version 2.2 introduces widget support to improve quick financial access and provide a more interactive home-screen experience. This update focuses on compact insights and faster actions without openin</td>
-    <td align="center">April 20, 2026</td>
+    <td align="center"><img src="https://img.shields.io/badge/v2.2-1ABC9C?style=flat-square" /></td>
+    <td>Home screen widget support — balance overview, quick entry, and compact transaction widget.</td>
+    <td align="center"><sub>Apr 20, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.2">📖</a></td>
   </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.1-34495E?style=flat" /></td>
-    <td>Version 2.1 focuses on refining core features, improving reliability, and enhancing the scheduled payments experience. This update ensures smoother category handling and introduces optional notificati</td>
-    <td align="center">April 19, 2026</td>
+  <tr bgcolor="#FAFAFA">
+    <td align="center"><img src="https://img.shields.io/badge/v2.1-34495E?style=flat-square" /></td>
+    <td>Core feature refinements, improved reliability, enhanced scheduled payments, and optional notifications.</td>
+    <td align="center"><sub>Apr 19, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.0-2ECC71?style=flat" /></td>
-    <td>Version 2.0 transforms the app from a simple expense tracker into a complete financial management system. With planning tools, loan tracking, secure backups, and a refined interface, managing your fin</td>
-    <td align="center">April 18, 2026</td>
+    <td align="center"><img src="https://img.shields.io/badge/v2.0-2ECC71?style=flat-square" /></td>
+    <td>Complete transformation — planning tools, loan tracking, secure backups, and a fully redesigned interface.</td>
+    <td align="center"><sub>Apr 18, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.0">📖</a></td>
   </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v1.0-27AE60?style=flat" /></td>
-    <td>Pebble v1.0</td>
-    <td align="center">April 17, 2026</td>
+  <tr bgcolor="#FAFAFA">
+    <td align="center"><img src="https://img.shields.io/badge/v1.0-27AE60?style=flat-square" /></td>
+    <td>🎉 Initial release — core expense tracking, wallet management, and category system.</td>
+    <td align="center"><sub>Apr 17, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v1.0">📖</a></td>
   </tr>
 </table>
-
 
 ---
 
 ## 🎓 Getting Started
 
-1. **Complete Setup Steps** (see top of README)
-2. **Download** the latest release from the [Releases Page](https://github.com/cxinmayy/pebble/releases)
-3. **Install** the APK on your Android device
-4. **Add Wallets** (Cash, Bank, Savings, etc.)
-5. **Start Tracking** your expenses with Pebble's intuitive interface
-6. **Customize** categories, budgets, and settings to match your needs
+```
+1. Complete Installation Setup (above)   →   2. Download latest APK
+       ↓
+3. Install on your Android device        →   4. Add your wallets
+       ↓
+5. Start logging transactions            →   6. Set budgets & goals
+```
 
 ---
 
-## 🤝 Support & Contribute
+## 🤝 Contributing
 
-- **Found a bug?** [Open an Issue](https://github.com/cxinmayy/pebble/issues)
-- **Have an idea?** [Suggest a Feature](https://github.com/cxinmayy/pebble/issues/new)
-- **Want to help?** Contributions are welcome!
+<div align="center">
+
+[![Report Bug](https://img.shields.io/badge/🐛_Report_Bug-FF6B6B?style=for-the-badge)](https://github.com/cxinmayy/pebble/issues)
+&nbsp;
+[![Request Feature](https://img.shields.io/badge/💡_Request_Feature-4CAF50?style=for-the-badge)](https://github.com/cxinmayy/pebble/issues/new)
+
+</div>
+
+All contributions are welcome — bug reports, feature ideas, UI feedback, or PRs. Please open an issue first to discuss major changes.
 
 ---
 
 ## ☕ Support Development
 
-If Pebble has helped you take control of your finances, consider supporting development:
-
 <div align="center">
 
-[![Buy Me Coffee](https://img.shields.io/badge/☕_Buy_Me_Coffee-FFD700?style=for-the-badge&logoColor=black)](https://buymeachai.ezee.li/cxinmayy)
+*Pebble is free, ad-free, and always will be. If it's helped you, consider buying me a coffee:*
+
+[![Buy Me Coffee](https://img.shields.io/badge/☕_Buy_Me_a_Coffee-FFD700?style=for-the-badge&logoColor=black)](https://buymeachai.ezee.li/cxinmayy)
+
+Your support funds: **new features** · **bug fixes** · **documentation** · **experiments**
 
 </div>
 
-Your support helps fuel:
-- 🚀 Continuous development and new features
-- 🐛 Bug fixes and stability improvements
-- 📚 Documentation and support
-- 💡 Innovation and experimentation
-
 ---
 
-## 📊 GitHub Stats
+## 📊 Repository Stats
 
 <div align="center">
 
-![Repo Stars](https://img.shields.io/github/stars/cxinmayy/pebble?style=for-the-badge&color=FFD700)
-![Repo Forks](https://img.shields.io/github/forks/cxinmayy/pebble?style=for-the-badge&color=00D4FF)
-![Issues](https://img.shields.io/github/issues/cxinmayy/pebble?style=for-the-badge&color=FF6B6B)
+![Stars](https://img.shields.io/github/stars/cxinmayy/pebble?style=for-the-badge&color=FFD700&logo=github)
+&nbsp;
+![Forks](https://img.shields.io/github/forks/cxinmayy/pebble?style=for-the-badge&color=00D4FF&logo=github)
+&nbsp;
+![Issues](https://img.shields.io/github/issues/cxinmayy/pebble?style=for-the-badge&color=FF6B6B&logo=github)
+&nbsp;
+![Downloads](https://img.shields.io/github/downloads/cxinmayy/pebble/total?style=for-the-badge&color=4CAF50&logo=github)
 
 </div>
 
@@ -446,16 +399,20 @@ Your support helps fuel:
 
 ## 📝 License
 
-Pebble is released under the **MIT License**. See [LICENSE](LICENSE) for details.
+Released under the **MIT License** — see [LICENSE](LICENSE) for details.
 
 ---
 
 <div align="center">
 
-**✨ Made with ❤️ by [@cxinmayy](https://github.com/cxinmayy)**
+<br>
 
-<img src="https://komarev.com/ghpvc/?username=cxinmayy&repo=pebble&color=FF6B6B&style=flat-square" />
+**✨ Built with passion by [@cxinmayy](https://github.com/cxinmayy)**
 
-**Thanks for using Pebble! Every star fuels the passion. 🌟**
+<img src="https://komarev.com/ghpvc/?username=cxinmayy&repo=pebble&color=FF6B6B&style=flat-square&label=profile+views" />
+
+<br><br>
+
+*If Pebble made your financial life a little better, a ⭐ means a lot.*
 
 </div>
