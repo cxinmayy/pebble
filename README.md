@@ -173,53 +173,10 @@ Settings → Apps → Pebble → ⋮ → Allow restricted
     <td align="center"><sub>Apr 22, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.5">📖</a></td>
   </tr>
-  <tr bgcolor="#FAFAFA">
-    <td align="center"><img src="https://img.shields.io/badge/v2.4.2-9C27B0?style=flat-square" /></td>
-    <td>This update introduces comprehensive multi-currency support and resolves critical stability issues with recurring payments, delivering a more versatile and crash-free financial tracking experience.</td>
-    <td align="center"><sub>Apr 22, 2026</sub></td>
-    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.4.2">📖</a></td>
-  </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.4.1-FF9800?style=flat-square" /></td>
-    <td>This update introduces customizable icon support for categories and wallets, resolves key search and loan tracking issues, and refines the editing workflow for a more reliable and personalized financi</td>
-    <td align="center"><sub>Apr 21, 2026</sub></td>
-    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.4.1">📖</a></td>
-  </tr>
-  <tr bgcolor="#FAFAFA">
-    <td align="center"><img src="https://img.shields.io/badge/v2.3-3498DB?style=flat-square" /></td>
-    <td>This update introduces powerful budget management tools, streamlined category editing, and refines the balance overview layout for a smoother financial tracking experience.</td>
-    <td align="center"><sub>Apr 21, 2026</sub></td>
-    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.3">📖</a></td>
-  </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.2.1-E74C3C?style=flat-square" /></td>
-    <td>This update fixes an issue in graph rendering logic to ensure accurate financial trend representation across weekly and monthly views.</td>
-    <td align="center"><sub>Apr 20, 2026</sub></td>
-    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.2.1">📖</a></td>
-  </tr>
-  <tr bgcolor="#FAFAFA">
-    <td align="center"><img src="https://img.shields.io/badge/v2.2-1ABC9C?style=flat-square" /></td>
-    <td>Version 2.2 introduces widget support to improve quick financial access and provide a more interactive home-screen experience. This update focuses on compact insights and faster actions without openin</td>
-    <td align="center"><sub>Apr 20, 2026</sub></td>
-    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.2">📖</a></td>
-  </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.1-34495E?style=flat-square" /></td>
-    <td>Version 2.1 focuses on refining core features, improving reliability, and enhancing the scheduled payments experience. This update ensures smoother category handling and introduces optional notificati</td>
-    <td align="center"><sub>Apr 19, 2026</sub></td>
-    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.1">📖</a></td>
-  </tr>
-  <tr bgcolor="#FAFAFA">
-    <td align="center"><img src="https://img.shields.io/badge/v2.0-2ECC71?style=flat-square" /></td>
-    <td>Version 2.0 transforms the app from a simple expense tracker into a complete financial management system. With planning tools, loan tracking, secure backups, and a refined interface, managing your fin</td>
-    <td align="center"><sub>Apr 18, 2026</sub></td>
-    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.0">📖</a></td>
-  </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v1.0-27AE60?style=flat-square" /></td>
-    <td>Pebble v1.0</td>
-    <td align="center"><sub>Apr 17, 2026</sub></td>
-    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v1.0">📖</a></td>
+  <tr>
+    <td colspan="4" align="center" style="padding: 10px;">
+      <a href="https://github.com/cxinmayy/pebble/releases">📋 View all releases on GitHub</a>
+    </td>
   </tr>
 </table>
 
