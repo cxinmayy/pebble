@@ -317,86 +317,80 @@ Automate transaction logging from banking SMS messages.
     <td align="center" width="10%"><strong>Link</strong></td>
   </tr>
   <tr bgcolor="#F5F5F5">
+    <td align="center"><img src="https://img.shields.io/badge/v2.7.2-CCCCCC?style=flat" /></td>
+    <td></td>
+    <td align="center">May 06, 2026</td>
+    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7.2">📖</a></td>
+  </tr>
+  <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.7.1-FF6B6B?style=flat" /></td>
-    <td># V2.7.1
-</td>
+    <td># V2.7.1</td>
     <td align="center">May 05, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.7-00D4FF?style=flat" /></td>
-    <td># V2.7
-</td>
+    <td># V2.7</td>
     <td align="center">May 03, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.6-4CAF50?style=flat" /></td>
-    <td>V2.6
-</td>
+    <td>V2.6</td>
     <td align="center">April 25, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.6">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.5-FFD700?style=flat" /></td>
-    <td>### **V2.5**
-</td>
+    <td>### **V2.5**</td>
     <td align="center">April 22, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.5">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.4.2-9C27B0?style=flat" /></td>
-    <td>## **V2.4.2**
-</td>
+    <td>## **V2.4.2**</td>
     <td align="center">April 22, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.4.2">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.4.1-FF9800?style=flat" /></td>
-    <td>## **V2.4.1**
-</td>
+    <td>## **V2.4.1**</td>
     <td align="center">April 21, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.4.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.3-3498DB?style=flat" /></td>
-    <td>## **V2.3**
-</td>
+    <td>## **V2.3**</td>
     <td align="center">April 21, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.3">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.2.1-E74C3C?style=flat" /></td>
-    <td>## **V2.2.1**
-</td>
+    <td>## **V2.2.1**</td>
     <td align="center">April 20, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.2.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.2-1ABC9C?style=flat" /></td>
-    <td>## **V2.2**
-</td>
+    <td>## **V2.2**</td>
     <td align="center">April 20, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.2">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.1-34495E?style=flat" /></td>
-    <td># V2.1
-</td>
+    <td># V2.1</td>
     <td align="center">April 19, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.0-2ECC71?style=flat" /></td>
-    <td># V2.0
-</td>
+    <td># V2.0</td>
     <td align="center">April 18, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.0">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v1.0-27AE60?style=flat" /></td>
-    <td>## Pebble v1.0 
-</td>
+    <td>## Pebble v1.0 </td>
     <td align="center">April 17, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v1.0">📖</a></td>
   </tr>
