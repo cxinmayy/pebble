@@ -39,27 +39,34 @@ new_latest_block = (
     f"(https://github.com/cxinmayy/pebble/releases/tag/{latest_tag})\n\n---\n"
 )
 
-# Replace the existing Latest Release block (marker -> next '---' horizontal rule)
-pattern = r"(### 🔥 Latest Release:.*?)(\n---\n)"
-if re.search(pattern, content, flags=re.S):
-    content = re.sub(pattern, new_latest_block, content, count=1, flags=re.S)
-    print("✅ Replaced Latest Release block using regex")
+# Flexible regex: match the Latest Release block up to the following horizontal rule (---),
+# allow different line endings and whitespace
+pattern = r"### 🔥 Latest Release:.*?\n(?:.*\n)*?\s*---\s*\n"
+m = re.search(pattern, content, flags=re.IGNORECASE)
+if m:
+    print("ℹ️ Found existing Latest Release block; replacing it.")
+    content = re.sub(pattern, new_latest_block, content, count=1, flags=re.IGNORECASE)
+    print("✅ Replaced Latest Release block using flexible regex")
 else:
-    # If marker not found, insert the block before the "### All Releases" or before the table
+    # Insert new block before the "### All Releases" marker or before the release table as fallback
     insert_marker = "### All Releases"
     if insert_marker in content:
         idx = content.find(insert_marker)
         content = content[:idx] + new_latest_block + content[idx:]
         print("⚠️ 'Latest Release' marker not found — inserted new block before 'All Releases'")
     else:
-        # fallback: insert near the top after the first '##' heading (safe default)
+        # fallback: insert near the top after the first '## ' heading
         first_h2 = content.find("\n## ")
         if first_h2 != -1:
             insert_at = first_h2 + 1
             content = content[:insert_at] + new_latest_block + content[insert_at:]
             print("⚠️ Marker missing — inserted new block near top")
+        else:
+            # last resort: prepend
+            content = new_latest_block + content
+            print("⚠️ Marker missing — prepended Latest Release block to the top")
 
-# ================= update version table (unchanged logic, but robust)
+# ================= update version table (robust)
 start_marker = '<table align="center" width="100%">'
 end_marker = '</table>'
 start_idx = content.find(start_marker)
@@ -112,12 +119,8 @@ for rel in releases:
 
 print(f"✅ Built {len(rows)} rows")
 
-# Reconstruct README with new table rows
-before = content[:header_end]
-after = content[end_idx + len(end_marker):]  # include the closing </table> in replacement
-new_table = ''.join(rows) + '\n'
-# keep the original table tags by inserting rows between header_end and end_idx
-new_content = content[:header_end] + new_table + content[end_idx + len(end_marker):]
+# Keep original table tags; insert rows between header_end and end_idx
+new_content = content[:header_end] + ''.join(rows) + '\n' + content[end_idx + len(end_marker):]
 
 with open('README.md', 'w', encoding='utf-8') as f:
     f.write(new_content)
