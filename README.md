@@ -15,7 +15,7 @@
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Version](https://img.shields.io/badge/Version-2.7.2-FF6B6B?style=for-the-badge&logo=github&logoColor=white)
+![Version](https://img.shields.io/badge/Version-2.8-FF6B6B?style=for-the-badge&logo=github&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-4CAF50?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/Platform-Android_8.0+-blue?style=for-the-badge&logo=android&logoColor=white)
 
@@ -144,34 +144,34 @@ Settings → Apps → Pebble → ⋮ → Allow restricted
     </td>
   </tr>
   <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.7.2-FF6B6B?style=flat-square" /><br><sub>🆕 Latest</sub></td>
+    <td align="center"><img src="https://img.shields.io/badge/v2.8-FF6B6B?style=flat-square" /><br><sub>🆕 Latest</sub></td>
+    <td>This update introduces a powerful inline calculator and a revolutionary **Tactile Scrub Timeline** for effortless date and time selection. Perform real-time math without leaving the entry screen, and </td>
+    <td align="center"><sub>May 06, 2026</sub></td>
+    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.8">📖</a></td>
+  </tr>
+  <tr bgcolor="#FAFAFA">
+    <td align="center"><img src="https://img.shields.io/badge/v2.7.2-00D4FF?style=flat-square" /></td>
     <td>This update unveils a completely reimagined visual engine: the new **Liquid Mesh Gradient System**, **Thematic Chart Sync**, and a premium in-app update experience. Wallet cards now flow with vivid, l</td>
     <td align="center"><sub>May 06, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7.2">📖</a></td>
   </tr>
-  <tr bgcolor="#FAFAFA">
+  <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.7.1-FF6B6B?style=flat-square" /></td>
     <td>This update delivers a polished visual foundation with a complete typography system and fluid, animated wallet gradients. Enjoy consistent, premium typography across every screen and personalized, liv</td>
     <td align="center"><sub>May 05, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7.1">📖</a></td>
   </tr>
-  <tr bgcolor="#F5F5F5">
+  <tr bgcolor="#FAFAFA">
     <td align="center"><img src="https://img.shields.io/badge/v2.7-00D4FF?style=flat-square" /></td>
     <td>This update introduces intelligent SMS transaction detection, seamless Google Drive cloud backups, and a completely redesigned Settings dashboard. Automate your financial tracking, secure your data wi</td>
     <td align="center"><sub>May 03, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7">📖</a></td>
   </tr>
-  <tr bgcolor="#FAFAFA">
+  <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.6-4CAF50?style=flat-square" /></td>
     <td>This update introduces a powerful Reports module, proactive Budget Alerts, and smarter transaction entry tools. Filter data in real-time, export professional PDF summaries, stay ahead of monthly spend</td>
     <td align="center"><sub>Apr 25, 2026</sub></td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.6">📖</a></td>
-  </tr>
-  <tr bgcolor="#F5F5F5">
-    <td align="center"><img src="https://img.shields.io/badge/v2.5-FFD700?style=flat-square" /></td>
-    <td>This update introduces a dedicated "Check for Updates" button in the app settings, directly linked to GitHub. Stay in control of your app version with a streamlined, transparent way to verify and acce</td>
-    <td align="center"><sub>Apr 22, 2026</sub></td>
-    <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.5">📖</a></td>
   </tr>
   <tr>
     <td colspan="4" align="center" style="padding: 10px;">
@@ -244,11 +244,11 @@ Settings → Apps → Pebble → ⋮ → Allow restricted
 
 <div align="center">
 
-### 🔥 Latest Release: v2.7.2 (May 06, 2026)
+### 🔥 Latest Release: v2.8 (May 06, 2026)
 
-**This update unveils a completely reimagined visual engine: the new **Liquid Mesh Gradient System**, **Thematic Chart Sync**, and a premium in-app update experience. Wallet cards now flow with vivid, l**
+**This update introduces a powerful inline calculator and a revolutionary **Tactile Scrub Timeline** for effortless date and time selection. Perform real-time math without leaving the entry screen, and **
 
-[![Download v2.7.2](https://img.shields.io/badge/⬇%EF%B8%8F_Download_v2.7.2-FF6B6B?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases/tag/v2.7.2)
+[![Download v2.8](https://img.shields.io/badge/⬇%EF%B8%8F_Download_v2.8-FF6B6B?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases/tag/v2.8)
 &nbsp;
 [![All Releases](https://img.shields.io/badge/📋_All_Releases-555555?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases)
 
