@@ -195,7 +195,11 @@ Settings → Apps → Pebble → ⋮ → Allow restricted
 <div align="center">
   <img width="220" src="https://github.com/user-attachments/assets/23d3f92b-08a8-4472-b1f2-408d5d46a10b" />
   &nbsp;&nbsp;
-  <img src="https://github.com/user-attachments/assets/ede4c799-ad4c-4d38-8182-f0973cdbd7a8" width="220" />
+  <a href="https://github.com/user-attachments/assets/545e2907-d677-49bf-989a-ad4e1c26fc23">
+    <img src="https://github.com/user-attachments/assets/48476287-e440-41d4-9c57-fdea2db28aad" width="220" />
+    <br>
+    <sub>▶ Click play protect image to watch instructions</sub>
+  </a>
 </div>
 
 ---
