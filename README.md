@@ -17,7 +17,7 @@
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Version](https://img.shields.io/badge/Version-2.7.1-FF6B6B?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-2.7.2-FF6B6B?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-4CAF50?style=for-the-badge)
 
 ---
@@ -293,7 +293,7 @@ Automate transaction logging from banking SMS messages.
 
 ### 🔥 Latest Release: v2.7.2 (May 06, 2026)
 
-**V2.7.2**
+**This update unveils a completely reimagined visual engine: the new **Liquid Mesh Gradient System**, **Thematic Chart Sync**, and a premium in-app update experience. Wallet cards now flow with vivid, l**
 
 [![View v2.7.2](https://img.shields.io/badge/View_Release-FF6B6B?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases/tag/v2.7.2)
 
@@ -314,73 +314,73 @@ Automate transaction logging from banking SMS messages.
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.7.2-FF6B6B?style=flat" /></td>
-    <td>V2.7.2</td>
+    <td>This update unveils a completely reimagined visual engine: the new **Liquid Mesh Gradient System**, **Thematic Chart Sync**, and a premium in-app update experience. Wallet cards now flow with vivid, l</td>
     <td align="center">May 06, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7.2">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.7.1-FF6B6B?style=flat" /></td>
-    <td>V2.7.1</td>
+    <td>This update delivers a polished visual foundation with a complete typography system and fluid, animated wallet gradients. Enjoy consistent, premium typography across every screen and personalized, liv</td>
     <td align="center">May 05, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.7-00D4FF?style=flat" /></td>
-    <td>V2.7</td>
+    <td>This update introduces intelligent SMS transaction detection, seamless Google Drive cloud backups, and a completely redesigned Settings dashboard. Automate your financial tracking, secure your data wi</td>
     <td align="center">May 03, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.7">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.6-4CAF50?style=flat" /></td>
-    <td>V2.6</td>
+    <td>This update introduces a powerful Reports module, proactive Budget Alerts, and smarter transaction entry tools. Filter data in real-time, export professional PDF summaries, stay ahead of monthly spend</td>
     <td align="center">April 25, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.6">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.5-FFD700?style=flat" /></td>
-    <td>**V2.5**</td>
+    <td>> This update introduces a dedicated "Check for Updates" button in the app settings, directly linked to GitHub. Stay in control of your app version with a streamlined, transparent way to verify and ac</td>
     <td align="center">April 22, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.5">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.4.2-9C27B0?style=flat" /></td>
-    <td>**V2.4.2**</td>
+    <td>This update introduces comprehensive multi-currency support and resolves critical stability issues with recurring payments, delivering a more versatile and crash-free financial tracking experience.</td>
     <td align="center">April 22, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.4.2">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.4.1-FF9800?style=flat" /></td>
-    <td>**V2.4.1**</td>
+    <td>This update introduces customizable icon support for categories and wallets, resolves key search and loan tracking issues, and refines the editing workflow for a more reliable and personalized financi</td>
     <td align="center">April 21, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.4.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.3-3498DB?style=flat" /></td>
-    <td>**V2.3**</td>
+    <td>This update introduces powerful budget management tools, streamlined category editing, and refines the balance overview layout for a smoother financial tracking experience.</td>
     <td align="center">April 21, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.3">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.2.1-E74C3C?style=flat" /></td>
-    <td>**V2.2.1**</td>
+    <td>This update fixes an issue in graph rendering logic to ensure accurate financial trend representation across weekly and monthly views.</td>
     <td align="center">April 20, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.2.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.2-1ABC9C?style=flat" /></td>
-    <td>**V2.2**</td>
+    <td>Version 2.2 introduces widget support to improve quick financial access and provide a more interactive home-screen experience. This update focuses on compact insights and faster actions without openin</td>
     <td align="center">April 20, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.2">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.1-34495E?style=flat" /></td>
-    <td>V2.1</td>
+    <td>Version 2.1 focuses on refining core features, improving reliability, and enhancing the scheduled payments experience. This update ensures smoother category handling and introduces optional notificati</td>
     <td align="center">April 19, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.1">📖</a></td>
   </tr>
   <tr bgcolor="#F5F5F5">
     <td align="center"><img src="https://img.shields.io/badge/v2.0-2ECC71?style=flat" /></td>
-    <td>V2.0</td>
+    <td>Version 2.0 transforms the app from a simple expense tracker into a complete financial management system. With planning tools, loan tracking, secure backups, and a refined interface, managing your fin</td>
     <td align="center">April 18, 2026</td>
     <td align="center"><a href="https://github.com/cxinmayy/pebble/releases/tag/v2.0">📖</a></td>
   </tr>
