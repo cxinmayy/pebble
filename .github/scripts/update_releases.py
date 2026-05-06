@@ -1,4 +1,3 @@
-# .github/scripts/update_releases.py
 import requests
 import re
 from datetime import datetime
@@ -22,7 +21,10 @@ releases = sorted(
 latest = releases[0]
 latest_tag = latest.get('tag_name', 'unknown')
 latest_date = datetime.strptime(latest['published_at'], '%Y-%m-%dT%H:%M:%SZ').strftime('%B %d, %Y')
-latest_body = (latest.get('body') or '').strip().split('\n')[0][:200] or 'Latest release'
+
+# FIX 2: Strip leading markdown heading symbols (e.g. "# V2.7.2" → "V2.7.2")
+raw_latest_body = (latest.get('body') or '').strip().split('\n')[0][:200]
+latest_body = re.sub(r'^#+\s*', '', raw_latest_body).strip() or 'Latest release'
 
 print(f"✅ Latest release: {latest_tag} on {latest_date}")
 
@@ -39,8 +41,7 @@ new_latest_block = (
     f"(https://github.com/cxinmayy/pebble/releases/tag/{latest_tag})\n\n---\n"
 )
 
-# Flexible regex: match the Latest Release block up to the following horizontal rule (---),
-# allow different line endings and whitespace
+# Flexible regex: match the Latest Release block up to the following horizontal rule (---)
 pattern = r"### 🔥 Latest Release:.*?\n(?:.*\n)*?\s*---\s*\n"
 m = re.search(pattern, content, flags=re.IGNORECASE)
 if m:
@@ -66,7 +67,7 @@ else:
             content = new_latest_block + content
             print("⚠️ Marker missing — prepended Latest Release block to the top")
 
-# ================= update version table (robust)
+# ================= Update version table (robust) =================
 start_marker = '<table align="center" width="100%">'
 end_marker = '</table>'
 start_idx = content.find(start_marker)
@@ -78,7 +79,7 @@ if start_idx == -1 or end_idx == -1:
         f.write(content)  # still write the latest block changes if any
     raise SystemExit(1)
 
-# find the header end (after the second </tr>)
+# Find the header end (after the second </tr>)
 tr_count = 0
 header_end = start_idx
 while tr_count < 2:
@@ -91,22 +92,32 @@ while tr_count < 2:
 
 print("✅ Table found, building rows...")
 
+# FIX 3: Known colors for specific tags; newer/unknown tags cycle through palette
 colors = {
     'v2.7.1': 'FF6B6B', 'v2.7': '00D4FF', 'v2.6': '4CAF50', 'v2.5': 'FFD700',
     'v2.4.2': '9C27B0', 'v2.4.1': 'FF9800', 'v2.3': '3498DB', 'v2.2.1': 'E74C3C',
     'v2.2': '1ABC9C', 'v2.1': '34495E', 'v2.0': '2ECC71', 'v1.0': '27AE60'
 }
+palette = [
+    'FF6B6B', '00D4FF', '4CAF50', 'FFD700', '9C27B0',
+    'FF9800', '3498DB', 'E74C3C', '1ABC9C', '34495E', '2ECC71', '27AE60'
+]
 
 rows = []
-for rel in releases:
+for i, rel in enumerate(releases):
     tag = rel.get('tag_name', 'unknown')
-    color = colors.get(tag, 'CCCCCC')
+    # Use known color if available, else cycle through palette
+    color = colors.get(tag, palette[i % len(palette)])
     pub = rel.get('published_at')
     try:
         date_str = datetime.strptime(pub, '%Y-%m-%dT%H:%M:%SZ').strftime('%B %d, %Y') if pub else ''
     except Exception:
         date_str = pub or ''
-    body_text = (rel.get('body') or '').split('\n')[0][:200] or 'Release'
+
+    # FIX 2: Strip leading markdown heading symbols from body text
+    raw_body = (rel.get('body') or '').split('\n')[0][:200]
+    body_text = re.sub(r'^#+\s*', '', raw_body).strip() or 'Release'
+
     row = (
         f'\n  <tr bgcolor="#F5F5F5">\n'
         f'    <td align="center"><img src="https://img.shields.io/badge/{tag}-{color}?style=flat" /></td>\n'
@@ -119,8 +130,15 @@ for rel in releases:
 
 print(f"✅ Built {len(rows)} rows")
 
-# Keep original table tags; insert rows between header_end and end_idx
-new_content = content[:header_end] + ''.join(rows) + '\n' + content[end_idx + len(end_marker):]
+# FIX 1: Re-include </table> closing tag — the original script was dropping it,
+# which caused every run after the first to fail with "Table markers not found".
+new_content = (
+    content[:header_end]
+    + ''.join(rows)
+    + '\n'
+    + end_marker           # ← was missing before
+    + content[end_idx + len(end_marker):]
+)
 
 with open('README.md', 'w', encoding='utf-8') as f:
     f.write(new_content)
