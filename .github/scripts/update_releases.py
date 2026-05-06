@@ -139,7 +139,7 @@ palette = [
 row_bgs = ['#F5F5F5', '#FAFAFA']
 
 rows = []
-for i, rel in enumerate(releases):
+for i, rel in enumerate(releases[:5]):  # Only show the 5 most recent releases
     tag = rel.get('tag_name', 'unknown')
     color = colors.get(tag, palette[i % len(palette)])
     pub = rel.get('published_at', '')
@@ -163,7 +163,18 @@ for i, rel in enumerate(releases):
     )
     rows.append(row)
 
-print(f"✅ Built {len(rows)} rows")
+# Footer row linking to full release history
+footer_row = (
+    '\n  <tr>'
+    '\n    <td colspan="4" align="center" style="padding: 10px;">'
+    '\n      <a href="https://github.com/cxinmayy/pebble/releases">'
+    '📋 View all releases on GitHub</a>'
+    '\n    </td>'
+    '\n  </tr>'
+)
+rows.append(footer_row)
+
+print(f"✅ Built {len(rows) - 1} release rows + footer")
 
 # Always explicitly write </table> so it is never dropped
 new_content = (
