@@ -23,7 +23,10 @@
 
 [![Download APK](https://img.shields.io/badge/⬇%EF%B8%8F_Download_Latest_APK-FF6B6B?style=for-the-badge&logoColor=white)](https://github.com/cxinmayy/pebble/releases/latest)
 &nbsp;
+[![SourceForge](https://img.shields.io/badge/SourceForge-Download-orange?style=for-the-badge&logo=sourceforge)](https://sourceforge.net/projects/pebble69/)
+&nbsp;
 [![Download with Obtainium](https://img.shields.io/badge/Obtainium-Install-purple?style=for-the-badge)](https://obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/cxinmayy/pebble)
+&nbsp;
 [![Release History](https://img.shields.io/badge/📋_Release_History-00D4FF?style=for-the-badge)](https://github.com/cxinmayy/pebble/releases)
 &nbsp;
 [![Buy Me Coffee](https://img.shields.io/badge/☕_Support_Dev-FFD700?style=for-the-badge&logoColor=black)](https://buymeachai.ezee.li/cxinmayy)
